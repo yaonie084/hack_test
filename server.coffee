@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 require('./routes')(app)
 
-server.listen app.get("port"), 'localhost', ->
+server.listen app.get("port"), '182.92.8.216', ->
   console.log "Express server listening on port " + app.get("port")
 
 module.exports = server
