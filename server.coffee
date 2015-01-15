@@ -23,10 +23,11 @@ else
   http = require 'http'
   morgan = require 'morgan'
   app = express()
+  cors = require 'cors'
   bodyParser = require 'body-parser'
   server = http.createServer(app)
   app.use(morgan('combined'))
-
+  app.use(cors())
   app.set("port", nconf.get('PORT'))
   app.set("views", __dirname + "/views")
   app.set("view engine", "jade")

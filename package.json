@@ -13,7 +13,8 @@
     "jade": "1.8.2",
     "morgan": "1.5.1",
     "body-parser": "*",
-    "newrelic": "1.14.6"
+    "newrelic": "1.14.6",
+    "cors": "2.3.2"
   },
   "author": "ethan",
   "license": "ISC"
