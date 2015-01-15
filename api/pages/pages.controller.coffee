@@ -3,27 +3,27 @@ _ = require('lodash')
 exports.index = (req, res) ->
   res.send [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+    name: '杨涛',
+    lastText: 'WHO遗传病社区控制合作中心',
+    face: 'https://coding.net/static/fruit_avatar/Fruit-19.png'
   }, {
     id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    name: '兰炯采',
+    lastText: '中国医药教育协会',
+    face: 'https://coding.net/static/fruit_avatar/Fruit-18.png'
   }, {
     id: 2,
-    name: 'Andrew Jostlin',
-    lastText: 'Did you get the ice cream?',
-    face: 'https://pbs.twimg.com/profile_images/491274378181488640/Tti0fFVJ.jpeg'
+    name: '卢大儒',
+    lastText: '中国优生优育协会',
+    face: 'https://coding.net/static/fruit_avatar/Fruit-17.png'
   }, {
     id: 3,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
+    name: '黄玉强',
+    lastText: '好医生医学教育中心',
+    face: 'https://coding.net/static/fruit_avatar/Fruit-16.png'
   }, {
     id: 4,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg'
+    name: '刘红刚',
+    lastText: '首都医科大学附属北京同仁医院',
+    face: 'https://coding.net/static/fruit_avatar/Fruit-15.png'
   }]
