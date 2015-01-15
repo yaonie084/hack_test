@@ -14,7 +14,10 @@
     "morgan": "1.5.1",
     "body-parser": "*",
     "newrelic": "1.14.6",
-    "cors": "2.3.2"
+    "cors": "2.3.2",
+    "moment": "2.9.0",
+    "redis": "0.12.1",
+    "hiredis": "*"
   },
   "author": "ethan",
   "license": "ISC"

@@ -16,7 +16,7 @@ console.log isDev
 if cores != 0 && cluster.isMaster && (isDev || isProd)
   _.times(cores || require('os').cpus().length-1, cluster.fork)
   cluster.on "disconnect", (worker, code, signal) ->
-    w = cluster.fork() # replace the dead worker
+    w = cluster.fork # replace the dead worker
     console.log "[%s] [master:%s] worker:%s disconnect! new worker:%s fork", new Date(), process.pid, worker.process.pid, w.process.pid
 else
   express = require 'express'
