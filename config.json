@@ -1,3 +1,5 @@
 {
-    "PORT":3000
+    "PORT": 3000,
+    "CORES": 1,
+    "NODE_ENV": "development"
 }

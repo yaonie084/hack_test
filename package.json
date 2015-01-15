@@ -12,7 +12,8 @@
     "lodash": "~2.2.1",
     "jade": "1.8.2",
     "morgan": "1.5.1",
-    "body-parser": "*"
+    "body-parser": "*",
+    "newrelic": "1.14.6"
   },
   "author": "ethan",
   "license": "ISC"
