@@ -32,7 +32,7 @@ else
   app.set("views", __dirname + "/views")
   app.set("view engine", "jade")
   app.use(bodyParser.urlencoded({ extended: false }))
-
+  app.enable('trust proxy')
   app.use(bodyParser.json())
   require('./routes')(app)
 
