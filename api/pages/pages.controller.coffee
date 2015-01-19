@@ -1,6 +1,6 @@
 _ = require('lodash')
 
-exports.index = (req, res) ->
+exports.v1 = (req, res) ->
   res.send [{
     id: 0,
     name: '杨涛',
@@ -27,3 +27,30 @@ exports.index = (req, res) ->
     lastText: '首都医科大学附属北京同仁医院',
     face: 'https://coding.net/static/fruit_avatar/Fruit-15.png'
   }]
+
+exports.v2 = (req, res) ->
+  res.send [{
+        id:1,
+        username:'张某某',
+        img:'https://coding.net/static/fruit_avatar/Fruit-14.png',
+        job:'主任1',
+        hospital:"北京大学第三人民医院1",
+        specialty:"骨科",
+        time:'2014-12-15'
+      }, {
+        id:2,
+        username:'李某某',
+        img:'https://coding.net/static/fruit_avatar/Fruit-13.png',
+        job:'主任2',
+        hospital:"北京大学第三人民医院2",
+        specialty:"外科",
+        time:'2015-1-15'
+      }, {
+        id:3,
+        username:'赵某某',
+        img:'https://coding.net/static/fruit_avatar/Fruit-12.png',
+        job:'主任3',
+        hospital:"北京大学第三人民医院3",
+        specialty:"骨科，外科",
+        time:'2014-1-15'
+      }]

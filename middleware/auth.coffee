@@ -16,11 +16,11 @@ module.exports.checkUrl = (req, res, next) ->
   myToken = md5(date, pid)
   console.log myToken
   checkRandomStr uuid, pid, (isValid) ->
-    # console.log '&&&&&&&&&&'
-    # console.log isValid
-    # console.log checkTimestamp(date)
-    # console.log myToken
-    # console.log '&&&&&&&&&'
+    console.log '&&&&&&&&&&'
+    console.log 'isValid:   ' + isValid
+    console.log 'checkTimestamp:   ' + checkTimestamp(date)
+    console.log 'token:   ' + myToken
+    console.log '&&&&&&&&&'
     if token == myToken && checkTimestamp(date) && isValid
       next()
     else
