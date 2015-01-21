@@ -6,37 +6,40 @@ nconf.argv()
      .env()
      .file('user', path.join(path.resolve(__dirname, './config.json')))
 
-cluster = require 'cluster'
 isProd = nconf.get('NODE_ENV') == 'production'
 isDev = nconf.get('NODE_ENV') == 'development'
-cores = nconf.get("CORES")
-console.log cores
-console.log cluster.isMaster
-console.log isDev
-if cores != 0 && cluster.isMaster && (isDev || isProd)
-  _.times(cores || require('os').cpus().length-1, cluster.fork)
-  cluster.on "disconnect", (worker, code, signal) ->
-    w = cluster.fork() # replace the dead worker
-    console.log "[%s] [master:%s] worker:%s disconnect! new worker:%s fork", new Date(), process.pid, worker.process.pid, w.process.pid
-else
-  express = require 'express'
-  http = require 'http'
-  morgan = require 'morgan'
-  app = express()
-  cors = require 'cors'
-  bodyParser = require 'body-parser'
-  server = http.createServer(app)
-  app.use(morgan('combined'))
-  app.use(cors())
-  app.set("port", nconf.get('PORT'))
-  app.set("views", __dirname + "/views")
-  app.set("view engine", "jade")
-  app.use(bodyParser.urlencoded({ extended: false }))
-  app.enable('trust proxy')
-  app.use(bodyParser.json())
-  require('./routes')(app)
+# use pm2 cluster mode already
+# cluster = require 'cluster'
+# cores = nconf.get("CORES")
+# if cores != 0 && cluster.isMaster && (isDev || isProd)
+#   _.times(cores || require('os').cpus().length-1, cluster.fork)
+#   cluster.on "disconnect", (worker, code, signal) ->
+#     w = cluster.fork() # replace the dead worker
+#     console.log "[%s] [master:%s] worker:%s disconnect! new worker:%s fork", new Date(), process.pid, worker.process.pid, w.process.pid
+# else
+express = require 'express'
+http = require 'http'
+morgan = require 'morgan'
+app = express()
+cors = require 'cors'
+bodyParser = require 'body-parser'
+favicon = require 'serve-favicon'
+server = http.createServer(app)
+app.use(morgan('combined'))
+app.use(cors())
+app.set("port", nconf.get('PORT'))
+publicDir = path.join(__dirname, "/public")
+app.use(favicon(publicDir + '/favicon.ico'))
 
-  server.listen app.get("port"), 'localhost', ->
-    console.log "Express server listening on port " + app.get("port")
+app.use(express['static'](publicDir))
+app.set("views", __dirname + "/views")
+app.set("view engine", "jade")
+app.use(bodyParser.urlencoded({ extended: false }))
+app.enable('trust proxy')
+app.use(bodyParser.json())
+require('./routes')(app)
 
-  module.exports = server
+server.listen app.get("port"), 'localhost', ->
+  console.log "Express server listening on port " + app.get("port")
+
+module.exports = server

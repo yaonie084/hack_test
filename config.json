@@ -1,6 +1,6 @@
 {
-    "PORT": 3000,
-    "CORES": 1,
+    "PORT": 3001,
+    "CORES": 2,
     "NODE_ENV": "development",
     "RedisHost": "localhost",
     "RedisPort": "6379"
