@@ -15,6 +15,6 @@ gulp.task('bower', function() {
          .pipe(gulp.dest('public/lib'))
 });
 
-gulp.task('compile_assets', ['static_resource', 'bower']);
+gulp.task('build', ['static_resource', 'bower']);
 
-gulp.task('default', ['compile_assets'])
+gulp.task('default', ['build'])
