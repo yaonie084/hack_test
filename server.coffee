@@ -28,8 +28,16 @@ server = http.createServer(app)
 app.use(morgan('combined'))
 app.use(cors())
 app.set("port", nconf.get('PORT'))
-publicDir = path.join(__dirname, "/public")
-app.use(favicon(publicDir + '/favicon.ico'))
+
+if isProd
+  publicDir = path.join(__dirname, "/public")
+else
+  if isDev
+    publicDir = path.join(__dirname, "/client")
+
+app.set 'publicDir', publicDir
+
+app.use favicon(publicDir + '/favicon.ico')
 
 app.use(express['static'](publicDir))
 app.set("views", __dirname + "/views")
