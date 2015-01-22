@@ -30,3 +30,4 @@ node_modules
 public
 client/lib
 newrelic_agent.log
+config.json
