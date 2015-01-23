@@ -2,8 +2,9 @@
     "name"       : "api",
     "script"     : "server.coffee",
     "instances"  : "max",
-    "error_file" : "log/err.log",
-    "out_file"   : "log/out.log",
     "exec_mode"  : "cluster_mode",
-    "port"       : 9005
+    "port"       : 3000,
+    "error_file"  : "./log/app.err",
+    "out_file"    : "./log/app.out",
+    "pid_file"    : "./log/app.pid",
 }]

@@ -1,7 +1,7 @@
 {
-    "PORT": 3000,
-    "CORES": 2,
-    "NODE_ENV": "production",
-    "RedisHost": "localhost",
-    "RedisPort": "6379"
+    "PORT": your port,
+    "CORES": your CPU cores,
+    "NODE_ENV": production or development,
+    "RedisHost": your redis host,
+    "RedisPort": your redis port
 }
