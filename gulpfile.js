@@ -6,7 +6,8 @@ gulp.paths = {
   src: 'client',
   dist: 'dist',
   tmp: '.tmp',
-  e2e: 'e2e'
+  e2e: 'e2e',
+  public: 'public'
 };
 
 require('require-dir')('./gulp')

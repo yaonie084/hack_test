@@ -27,7 +27,7 @@ gulp.task('clean', function (done) {
 
 gulp.task('misc', function () {
   return gulp.src(paths.src + '/**/*.ico')
-    .pipe(gulp.dest(paths.dist + '/'));
+    .pipe(gulp.dest(paths.public + '/'));
 });
 
 gulp.task('build', ['partials', 'misc'])
