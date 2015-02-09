@@ -23,12 +23,19 @@
   },
   "devDependencies": {
     "gulp": "~3.8.5",
+    "gulp-load-plugins": "*",
+    "gulp-rename": "*",
+    "gulp-consolidate": "*",
     "gulp-coffee": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",
     "gulp-imagemin": "*",
     "gulp-sourcemaps": "*",
-    "gulp-bower": "*"
+    "main-bower-files": "*",
+    "require-dir": "*",
+    "uglify-save-license": "*",
+    "del": "*",
+    "gulp-minify-html": "*"
   },
   "author": "ethan",
   "license": "ISC"

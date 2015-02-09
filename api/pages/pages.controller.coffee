@@ -54,3 +54,6 @@ exports.v2 = (req, res) ->
         specialty:"骨科，外科",
         time:'2014-1-15'
       }]
+
+exports.test = (req, res) ->
+  res.send 'test123'  
