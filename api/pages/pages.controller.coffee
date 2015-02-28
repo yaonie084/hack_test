@@ -56,4 +56,4 @@ exports.v2 = (req, res) ->
       }]
 
 exports.test = (req, res) ->
-  res.send 'test123'  
+  res.send req.query
