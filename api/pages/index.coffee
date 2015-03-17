@@ -8,6 +8,6 @@ _ = require('lodash')
 router.get('/v1', auth.checkUrl, controller.v1)
 router.get('/v2', auth.checkUrl, controller.v2)
 
-router.get('/test', controller.test)
+router.post('/test', controller.test)
 
 module.exports = router
