@@ -1,0 +1,59 @@
+.stat-panel {
+  background: #fff;
+  border-radius: 2px;
+  display: table;
+  margin-bottom: 22px;
+  overflow: hidden;
+  position: relative;
+  table-layout: fixed!important;
+  width: 100%;
+}
+
+.bg-danger, .bg-danger a, .bg-danger a:focus, .bg-danger:active, .bg-danger:focus, .bg-danger:hover {
+  color: #fff;
+}
+
+.bg-danger {
+  background: #e66454!important;
+}
+
+.valign-middle, .valign-middle td, .valign-middle th {
+  vertical-align: middle!important;
+}
+
+.stat-cell {
+  display: table-cell!important;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+.stat-cell, .stat-row {
+  float: none!important;
+}
+
+.stat-cell .bg-icon {
+  bottom: 0px;
+  top: auto;
+  color: rgba(0,0,0,.05);
+  font-size: 100px;
+  line-height: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 120px;
+}
+
+.text-xlg {
+  font-size: 30px;
+}
+
+.stat-cell>* {
+  position: relative;
+}
+
+.bg-danger * {
+  border-color: #eb8073;
+}
+
