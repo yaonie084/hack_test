@@ -60,4 +60,4 @@ exports.test = (req, res) ->
   password = req.body.password
   console.log login
   console.log password
-  res.send {foo: "ggggggg"}
+  res.send {foo: "success"}
