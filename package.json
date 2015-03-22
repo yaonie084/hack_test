@@ -37,7 +37,8 @@
     "del": "*",
     "gulp-minify-html": "*",
     "sinon": "*",
-    "chai": "*"
+    "chai": "*",
+    "mocha": "*"
   },
   "author": "ethan",
   "license": "ISC"
