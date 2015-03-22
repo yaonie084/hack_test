@@ -35,7 +35,9 @@
     "require-dir": "*",
     "uglify-save-license": "*",
     "del": "*",
-    "gulp-minify-html": "*"
+    "gulp-minify-html": "*",
+    "sinon": "*",
+    "chai": "*"
   },
   "author": "ethan",
   "license": "ISC"
