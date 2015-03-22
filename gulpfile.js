@@ -18,8 +18,4 @@ gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
 
-// gulp.task('test', function(){
-//     gulp.start('test')
-// });
-
 gulp.task('help', taskListing);

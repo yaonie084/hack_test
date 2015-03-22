@@ -22,7 +22,7 @@ describe("Routes", function() {
         var mockRes = {
           send: function(res) {
             res.should.exist;
-            res.should.eql({foo: 'success1'});
+            res.should.eql({foo: 'success'});
           }
         };
         pages.test(mockReq, mockRes)
