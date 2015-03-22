@@ -36,9 +36,12 @@
     "uglify-save-license": "*",
     "del": "*",
     "gulp-minify-html": "*",
+    "gulp-task-listing": "*",
     "sinon": "*",
     "chai": "*",
-    "mocha": "*"
+    "gulp-mocha": "*",
+    "should": "*",
+    "supertest": "*"
   },
   "author": "ethan",
   "license": "ISC"
