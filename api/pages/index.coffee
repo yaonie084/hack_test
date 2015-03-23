@@ -5,6 +5,6 @@ auth = require('../../middleware/auth')
 router = express.Router()
 _ = require('lodash')
 
-router.post('/test', controller.test)
+router.get('/test', controller.test)
 
 module.exports = router
