@@ -1,4 +1,4 @@
-require 'newrelic'
+require 'oneapm'
 _ = require 'lodash'
 nconf = require 'nconf'
 path = require 'path'
@@ -23,6 +23,7 @@ morgan = require 'morgan'
 app = express()
 cors = require 'cors'
 bodyParser = require 'body-parser'
+methodOverride = require 'method-override'
 favicon = require 'serve-favicon'
 server = http.createServer(app)
 app.use(morgan('combined'))
@@ -35,6 +36,10 @@ else
   if isDev
     publicDir = path.join(__dirname, "/client")
 
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use bodyParser.json()
+app.use methodOverride()
+
 app.set 'publicDir', publicDir
 
 app.use favicon(publicDir + '/favicon.ico')
@@ -42,10 +47,28 @@ app.use favicon(publicDir + '/favicon.ico')
 app.use(express['static'](publicDir))
 app.set("views", __dirname + "/views")
 app.set("view engine", "jade")
-app.use(bodyParser.urlencoded({ extended: false }))
 app.enable('trust proxy')
 app.use(bodyParser.json())
 require('./routes')(app)
+
+Slack = require('slack-node');
+
+webhookUri = nconf.get('SLACK_WEBHOOK');
+
+slack = new Slack();
+slack.setWebhook(webhookUri);
+
+app.use (err, req, res, next) ->
+  console.log 'error'
+  slack.webhook {
+    channel: '#guahao'
+    username: 'hack_test'
+    text: err.stack
+  }, (err, response) ->
+    console.log response
+
+  res.status 500
+  res.send 'oops!'
 
 server.listen app.get("port"), ->
   console.log "Express server listening on port " + app.get("port")

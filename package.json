@@ -7,19 +7,22 @@
     "start": "coffee ./server.coffee"
   },
   "dependencies": {
-    "express": "4.0.0",
-    "nconf": "*",
-    "lodash": "~2.2.1",
-    "jade": "1.8.2",
-    "morgan": "1.5.1",
     "body-parser": "*",
-    "newrelic": "1.14.6",
-    "cors": "2.3.2",
-    "moment": "2.9.0",
-    "redis": "0.12.1",
-    "hiredis": "*",
     "bower": "~1.3.12",
-    "serve-favicon": "~2.2.0"
+    "cors": "2.3.2",
+    "errorhandler": "1.3.5",
+    "express": "4.0.0",
+    "hiredis": "*",
+    "jade": "1.8.2",
+    "lodash": "~2.2.1",
+    "method-override": "2.3.2",
+    "moment": "2.9.0",
+    "morgan": "1.5.1",
+    "nconf": "*",
+    "newrelic": "*",
+    "redis": "0.12.1",
+    "serve-favicon": "~2.2.0",
+    "slack-node": "*"
   },
   "devDependencies": {
     "gulp": "~3.8.5",
