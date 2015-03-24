@@ -22,7 +22,8 @@
     "newrelic": "*",
     "redis": "0.12.1",
     "serve-favicon": "~2.2.0",
-    "slack-node": "*"
+    "slack-node": "*",
+    "request": "*"
   },
   "devDependencies": {
     "gulp": "~3.8.5",
