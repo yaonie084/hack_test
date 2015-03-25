@@ -3,10 +3,10 @@ _ = require 'lodash'
 path = require 'path'
 crypto = require 'crypto'
 moment = require 'moment'
-redis = require 'redis'
+# redis = require 'redis'
 nconf = require 'nconf'
-client = redis.createClient(nconf.get("RedisPort"), nconf.get("RedisServer"))
-client.select(3)
+# client = redis.createClient(nconf.get("RedisPort"), nconf.get("RedisServer"))
+# client.select(3)
 
 module.exports.checkUrl = (req, res, next) ->
   date = req.query.date
@@ -42,10 +42,10 @@ checkTimestamp = (date_str) ->
   else
     return false
 
-checkRandomStr = (uuid, str, cb) ->
-  client.get uuid, (err, value) ->
-    if value == str
-      cb false
-    else
-      client.set uuid, str
-      cb true
+# checkRandomStr = (uuid, str, cb) ->
+#   client.get uuid, (err, value) ->
+#     if value == str
+#       cb false
+#     else
+#       client.set uuid, str
+#       cb true
