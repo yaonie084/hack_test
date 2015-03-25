@@ -23,7 +23,8 @@
     "redis": "0.12.1",
     "serve-favicon": "~2.2.0",
     "slack-node": "*",
-    "request": "*"
+    "request": "*",
+    "coffee-script": "*"
   },
   "devDependencies": {
     "gulp": "~3.8.5",
