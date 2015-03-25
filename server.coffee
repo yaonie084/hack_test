@@ -1,4 +1,4 @@
-require 'oneapm'
+require 'newrelic'
 _ = require 'lodash'
 nconf = require 'nconf'
 path = require 'path'
