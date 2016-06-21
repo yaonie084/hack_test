@@ -6,8 +6,6 @@ exports.test = function(req, res) {
   tripUser = req.body.tripUser;
   location = req.body.location;
 
-  console.log(req.body);
-
   if(tripUser == '张三') {
     result = {
       success: true
