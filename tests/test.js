@@ -9,7 +9,7 @@ describe("Routes", function() {
   describe("test", function() {
 
       it("旅行者是张三需要返回hash表{success: true}", function() {
-        var mockReq = {body: {tripUser: '张三', location: '北京'}};
+        var mockReq = {body: {tripUser: '张三12', location: '北京'}};
         var mockRes = {
           send: function(res) {
 
