@@ -9,7 +9,7 @@ describe("Routes", function() {
   describe("test", function() {
 
       it("should respond a hash", function() {
-        var mockReq = {body: {tripUser: '张三123', location: '北京'}};
+        var mockReq = {body: {tripUser: '张三', location: '北京'}};
         var mockRes = {
           send: function(res) {
 
