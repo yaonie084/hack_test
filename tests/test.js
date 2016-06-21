@@ -8,21 +8,15 @@ var pages = require('../api/pages/pages.controller');
 describe("Routes", function() {
   describe("test", function() {
 
-      it("should respond", function() {
-        var req,res,spy;
-
-        req = res = {body: {login: '123', password: '456'}};
-        spy = res.send = sinon.spy();
-        pages.test(req, res)
-        expect(spy.calledOnce).to.equal(true);
-      });
-
       it("should respond a hash", function() {
-        var mockReq = {body: {login: '123', password: '456'}};
+        var mockReq = {body: {tripUser: '张三123', location: '北京'}};
         var mockRes = {
           send: function(res) {
+
+            // console.log(res);
+
             res.should.exist;
-            res.should.eql({foo: 'success'});
+            res.should.eql({success: true});
           }
         };
         pages.test(mockReq, mockRes)
