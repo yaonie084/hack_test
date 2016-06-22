@@ -12,7 +12,6 @@ describe("Routes", function() {
         var mockReq = {body: {tripUser: '张三', location: '北京'}};
         var mockRes = {
           send: function(res) {
-
             // console.log(res);
 
             res.should.exist;
